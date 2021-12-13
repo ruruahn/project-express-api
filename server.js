@@ -21,16 +21,16 @@ app.get("/", (req, res) => {
 app.get("/books", (req, res) => {
   const { author } = req.query;
 
-  //get a list of books with specific authors
-  let sortByAuthor = booksData;
-  if (author) {
-    sortByAuthor = sortByAuthor.filter((item) => item.authors.toLowerCase().includes(author.toLowerCase()));
-  }
-  res.json({
-    response: sortByAuthor,
-    success: true,
-  });
-});
+//   //get a list of books with specific authors
+//   let sortByAuthor = booksData;
+//   if (author) {
+//     sortByAuthor = sortByAuthor.filter((item) => item.authors.toLowerCase().includes(author.toLowerCase()));
+//   }
+//   res.json({
+//     response: sortByAuthor,
+//     success: true,
+//   });
+// });
 
 //returns one book with the specified bookID-number
 app.get("/books/:id", (req, res) => {
